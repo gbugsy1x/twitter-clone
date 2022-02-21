@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %} {% load static %}  
+<section class='content'>
+  <div class='mainheaderr_logo'>
+    <img src="/static/img/logo-twitterblue.svg" >
+    <h1>Edit</h1>
+    
+  </div>
+    <section class='post_form'>
+      
+    
+        <form action="/edit/{{posts.id}}/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+          <input type='text' name='name' placeholder='Your Name' value="{{posts.name}}" required /> <br>
+            <input name='body' placeholder='Whats Happening?' value="{{posts.body}}" required></input>
+            
+         
+            <div class = "imagecls">
+            <input name="image" type="file">
+          </div>
+          {% if posts.image.url %}
+          <img src="{{posts.image.url}}"  style = 'width: 250px; height: 200px;'>
+          {% endif %}
+          <br>
+
+          <div  class= "banner">
+              <a href="{% url 'index' %}" id="cancel"  type="submit"> cancel</a>
+            <button type='submit' value='Tweet' >Tweet</button>
+          </div>
+        </form>
+        
+    </section>
+    {% endblock %}
