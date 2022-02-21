@@ -7,9 +7,8 @@ So there are not user accounts and follow function. You can challenge after you 
 ```
 Check out [LIVE Twitter clone DEMO](https://twitterclone-olawale.herokuapp.com/) here!!
 
-Screenshot 
-
-
+ 
+<img width="1322" alt="Screen Shot 2022-02-21 at 11 05 47 AM" src="https://user-images.githubusercontent.com/97544772/155014066-9c3d5b38-f06c-4cc3-a776-30884afe2187.png">
 ## Tech used
 ```
 * Html
